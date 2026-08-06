@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last Call at Mr Swan's</title>
+  <!--link rel="stylesheet" href="style.css" /-->
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+  <button id="settingsButton" class="settings-button" onclick="toggleSettings()">Settings</button>
+
+  <!-- INTRO -->
+  <section id="introScreen" class="screen active intro-screen">
+    <h1>Last Call at Mr Swan's</h1>
+    <button onclick="startGame()">Play</button>
+  </section>
+
+  <!-- BAR VIEW -->
+  <section id="barView" class="screen">
+    <div id="objective">Objective: Read instructions</div>
+    <button class="menu-button" onclick="toggleDrinkGuide()">Drink Menu</button>
+    <button class="nav-right" onclick="showRoom()">Room</button>
+    
+    <div id="guestArea"></div>
+  </section>
+
+  <!-- ROOM VIEW -->
+  <section id="roomView" class="screen">
+    <div id="objectiveRoom">Objective: Check in or Dilly Dally</div>
+    <button class="nav-left" onclick="showBar()">Bar</button>
+    <div class="room-actions">
+      <button class="checkin-button" onclick="toggleCheckIn()">Check In</button>
+      <button id="bandButton" class="band-button hidden" onclick="watchBand()">Watch the Band</button>
+      <button id="eavesdropButton" class="eavesdrop-button hidden" onclick="startEavesdrop()">Eavesdrop</button>
+    </div>
+    <button id="dillyDallyButton" class="nav-right" onclick="dillyDally()">Dilly Dally</button>
+    
+    <div id="roomCenter"></div>
+  </section>
+
+  <!-- OVERLAYS -->
+  <div id="drinkGuide" class="overlay hidden"></div>
+  <div id="settingsPanel" class="overlay hidden"></div>
+  <div id="checkInPanel" class="overlay hidden"></div>
+  <div id="snapshotOverlay" class="overlay hidden"></div>
+  <div id="endingOverlay" class="overlay hidden"></div>
+  <div id="dialogueBox" class="dialogue-box hidden"></div>
+  <div id="timeDisplay" class="time-display hidden">
+    <div class="time-label">Time</div>
+    <div id="timeValue">9:00 PM</div>
+  </div>
+
+  <!-- OUTRO -->
+  <section id="outroScreen" class="screen outro-screen">
+    <div class="outro-art" aria-hidden="true"></div>
+    <div class="outro-content">
+      <p class="outro-kicker">Thanks for playing</p>
+      <h1>Last Call at Mr Swan's</h1>
+      <h2 id="endingTitle">The party is over.</h2>
+      <p id="endingText">Thank you for playing.</p>
+      <div class="credits-block">
+        <div>Credits coming soon</div>
+      </div>
+      <button onclick="restartGame()">Replay</button>
+    </div>
+  </section>
+
+  <div id="eyeTransition"></div>
+
+  <!--script src="script.js"></script-->
+</body>
+</html>
