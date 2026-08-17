@@ -274,32 +274,95 @@ button:disabled:hover {
   background-size: cover;
 }
 
-#roomView.eavesdrop-balcony-bg::after,
-#roomView.eavesdrop-cards-bg::after,
-#roomView.eavesdrop-music-bg::after,
-#roomView.eavesdrop-stairs-bg::after,
-#roomView.eavesdrop-mirror-bg::after {
+#roomView.eavesdrop-cards-bg::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: 40%;
-  width: min(54vw, 560px);
-  height: min(64vh, 640px);
+  top: calc(50vh - 38px);
+  width: min(42.5vw, 450px);
+  aspect-ratio: 736 / 920;
   transform: translate(-50%, -50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url("/images/cards.jpg");
   border: 1px solid rgba(255, 231, 188, 0.62);
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.44);
   pointer-events: none;
   z-index: 1;
 }
 
-#roomView.eavesdrop-balcony-bg::after { background-image: url("/images/balcony.jpg"); }
-#roomView.eavesdrop-cards-bg::after { background-image: url("/images/cards.jpg"); }
-#roomView.eavesdrop-music-bg::after { background-image: url("/images/eavesdrop-music.jpg"); }
-#roomView.eavesdrop-stairs-bg::after { background-image: url("/images/eavesdrop-stairs.jpg"); }
-#roomView.eavesdrop-mirror-bg::after { background-image: url("/images/eavesdrop-mirror.jpg"); }
+#roomView.eavesdrop-stairs-bg::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50vh - 38px);
+  width: min(31vw, 328px);
+  aspect-ratio: 406 / 696;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/images/eavesdrop-stairs.jpg");
+  border: 1px solid rgba(255, 231, 188, 0.62);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.44);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#roomView.eavesdrop-music-bg::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50vh - 38px);
+  width: min(46vw, 488px);
+  aspect-ratio: 707 / 816;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/images/eavesdrop-music.jpg");
+  border: 1px solid rgba(255, 231, 188, 0.62);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.44);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#roomView.eavesdrop-balcony-bg::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50vh - 38px);
+  width: min(42.75vw, 453px);
+  aspect-ratio: 828 / 1029;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/images/balcony.jpg");
+  border: 1px solid rgba(255, 231, 188, 0.62);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.44);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#roomView.eavesdrop-mirror-bg::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50vh - 38px);
+  width: min(51vw, 540px);
+  aspect-ratio: 871 / 908;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/images/eavesdrop-mirror.jpg");
+  border: 1px solid rgba(255, 231, 188, 0.62);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.44);
+  pointer-events: none;
+  z-index: 1;
+}
 
 #roomView.eavesdrop-maze-bg::before {
   background:
@@ -400,10 +463,10 @@ button:disabled:hover {
 }
 
 .lila-march-guest {
-  --guest-x: 34px;
-  --guest-y: 0px;
+  --guest-x: 71.8px;
+  --guest-y: 96px;
   --mark-left: 26.5%;
-  --mark-top: 2.6%;
+  --mark-top: -1.06%;
 }
 
 .lila-march-sprite {
@@ -412,9 +475,9 @@ button:disabled:hover {
 
 .silas-weaver-guest {
   --guest-x: -8px;
-  --guest-y: -18px;
-  --mark-left: 60%;
-  --mark-top: 1.8%;
+  --guest-y: -30px;
+  --mark-left: 57.3%;
+  --mark-top: -8%;
 }
 
 .silas-weaver-sprite {
@@ -424,9 +487,9 @@ button:disabled:hover {
 
 .evelyn-cross-guest {
   --guest-x: -8px;
-  --guest-y: 0px;
+  --guest-y: 38px;
   --mark-left: 36.8%;
-  --mark-top: 2.8%;
+  --mark-top: -1.08%;
 }
 
 .evelyn-cross-sprite {
@@ -436,9 +499,9 @@ button:disabled:hover {
 
 .rene-de-clairmont-guest {
   --guest-x: 8px;
-  --guest-y: -12px;
+  --guest-y: -24px;
   --mark-left: 55%;
-  --mark-top: 4.2%;
+  --mark-top: 2%;
 }
 
 .rene-de-clairmont-sprite {
@@ -450,7 +513,7 @@ button:disabled:hover {
   --guest-x: -4px;
   --guest-y: 0px;
   --mark-left: 53.1%;
-  --mark-top: 4.1%;
+  --mark-top: 0.5%;
 }
 
 .liesel-ziegler-sprite {
@@ -460,21 +523,21 @@ button:disabled:hover {
 
 .andrew-smith-guest {
   --guest-x: 6px;
-  --guest-y: 70px;
+  --guest-y: 336.8px;
   --mark-left: 51.2%;
-  --mark-top: 2.5%;
+  --mark-top: 0.20%;
 }
 
 .andrew-smith-sprite {
-  height: min(73vh, 671px);
+  height: min(100.38vh, 922.5px);
   transform: translateX(6px);
 }
 
 .flora-calderon-guest {
   --guest-x: 4px;
-  --guest-y: 0px;
-  --mark-left: 52.3%;
-  --mark-top: 9.1%;
+  --guest-y: -26px;
+  --mark-left: 57.71%;
+  --mark-top: 17.10%;
 }
 
 .flora-calderon-sprite {
@@ -484,13 +547,13 @@ button:disabled:hover {
 
 .mr-swan-guest {
   --guest-x: 4px;
-  --guest-y: -28px;
-  --mark-left: 60.4%;
-  --mark-top: 2.3%;
+  --guest-y: -140px;
+  --mark-left: 75.3%;
+  --mark-top: 33.46%;
 }
 
 .mr-swan-sprite {
-  height: min(72vh, 680px);
+  height: min(69.8vh, 660px);
   transform: translateX(8px);
 }
 
